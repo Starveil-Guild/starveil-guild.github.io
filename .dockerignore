@@ -1,0 +1,6 @@
+# .dockerignore
+node_modules
+.bridgetown-cache
+output
+*.log
+*.md

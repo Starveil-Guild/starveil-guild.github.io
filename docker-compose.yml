@@ -1,0 +1,14 @@
+version: "3"
+services:
+  site:
+    image: starveil_site:latest
+    deploy:
+      restart_policy:
+        condition: on-failure
+    ports:
+      - 4000:4000
+    volumes:
+      - .:/src
+      - /src/node_modules
+    networks:
+      - default

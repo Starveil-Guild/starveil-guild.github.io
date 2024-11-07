@@ -1,0 +1,13 @@
+---
+layout: page
+title: All Updates
+---
+
+<% for post in collections.posts.resources %>
+  <div class="bg-gradient-to-br from-purple-400 via-purple-200 to-blue-200 rounded-lg p-1">
+    <a class="bg-white rounded-md text-xl px-6 py-5 flex items-center gap-1 md:px-12 md:py-10 md:gap-4 md:text-3xl" href="<%= post.relative_url %>">
+      <span class="font-bold underline text-violet-900"><%= post.data.title %></span>
+      <span class="block text-base md:text-lg"><%= post.data.date %></span>
+    </a>
+  </div>
+<% end %>
